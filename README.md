@@ -6,13 +6,13 @@ The software does transactions at random times of the day
 
 ![image](https://github.com/user-attachments/assets/d60158f4-7209-47b7-9033-357a49441ecc)
 
-### Features
+## Features
    - Wrap/unwrap SFI
    - Skate/unstake
    - Claim 
    - Bridge
 
- ## Quick Star
+ ## Quick Start
  1. Install git - [link](https://git-scm.com/downloads)
  2. Press `WIN + R` to open the Run dialog box
  3. Type `cmd` and press enter to open console.

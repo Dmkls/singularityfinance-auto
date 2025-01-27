@@ -1,3 +1,5 @@
+DELAY_BEFORE_START = False  # Random sleep 0-12 hours before start current account. True if you have 100+ accounts
+
 ENABLED_OPERATIONS = {
     "wrap": True,
     "unwrap": True,

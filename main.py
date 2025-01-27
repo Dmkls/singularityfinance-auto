@@ -1,7 +1,7 @@
 from utils.file_utils import read_private_keys
 from services.singularity import *
 from services.sepolia import *
-from configs.settings import ENABLED_OPERATIONS
+from configs.settings import ENABLED_OPERATIONS, DELAY_BEFORE_START
 
 
 async def process_account(private_key: str):
@@ -12,7 +12,10 @@ async def process_account(private_key: str):
         write_filed_account(account.wallet_address)
         return
 
-    await asyncio.sleep(random.randint(1, 12 * 60 * 60))
+    if DELAY_BEFORE_START:
+        await asyncio.sleep(random.randint(1, 12 * 60 * 60))
+
+    await asyncio.sleep(random.randint(1, 60))
 
     while True:
 
