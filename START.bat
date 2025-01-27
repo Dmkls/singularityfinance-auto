@@ -1,3 +1,3 @@
-call .\venv\Scripts\activate
+call .\.venv\Scripts\activate
 python main.py
 pause
