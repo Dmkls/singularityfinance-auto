@@ -7,7 +7,7 @@ from configs.settings import ENABLED_OPERATIONS, DELAY_BEFORE_START
 async def process_account(private_key: str):
     account = Account(private_key, Singularity)
 
-    if await get_sfi_balance(account) < 1:
+    if await get_sfi_balance(account) < 0.01:
         logger.error(f"{account.wallet_address} | Insufficient balance, please request test tokens on the faucet")
         write_filed_account(account.wallet_address)
         return
