@@ -56,8 +56,10 @@ async def process_account(private_key: str):
 
 async def main():
     private_keys = read_private_keys()
-    tasks = [process_account(private_key) for private_key in private_keys]
-    await asyncio.gather(*tasks)
+    for private_key in private_keys:
+        asyncio.create_task(process_account(private_key))
+        await asyncio.sleep(10)
+    await asyncio.sleep(float("inf"))
 
 if __name__ == "__main__":
     asyncio.run(main())
